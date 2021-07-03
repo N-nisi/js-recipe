@@ -30,15 +30,17 @@
 // FizzBuzzFunction(100)
 
 //
-// 3が好き
+// 発展 3が好き
 
 const genkiFunction = function(number) {
   // n を 1 から、 number まで、値を1ずつ増やしながら、for の {} の中身を繰り返す
   for (let n = 1; n <= number; n++) {
-    if (n / 10 <= 19 === 3 && n % 10 <= 9) {
+    if (n / 10 === 3) {
       console.log(n + "!!!!!!!")
     } else if (n % 10 === 3) {
       console.log(n + "!!!!!!!!")
+    } else if (n <= 39 && n > 30) {
+      console.log(n + "!!!!!!!")
     } else {
       console.log(n)
     }
