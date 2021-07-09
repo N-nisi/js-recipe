@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>week1</title>
+  </head>
+  <body>
+    <h1>ご飯クイズ</h1>
+    <div>私の昨日の夕飯はなんでしょう？</div>
+    <button id="udon-button">うどん</button>
+    <button id="soba-button">そば</button>
+
+    <script>
+      const aButton = document.getElementById("udon-button")
+      const bButton = document.getElementById("soba-button")
+
+      aButton.onclick = function() {
+        console.log("正解です！")
+      }
+      bButton.onclick = function() {
+        console.log("残念！")
+      }
+
+      const hiroshi = {
+        name: "ひろし",
+        university: "立教",
+        age: 22,
+        hobby: ["アニメ", "バッティングセンター"],
+        familly: {
+          papa: "かずみ",
+          mama: "としこ",
+          sis: "ゆうり",
+        },
+        isMentor: false,
+        isStudent: true,
+        sayHello: function() {
+          alert(`こんにちは${this.name}です！！`)
+        },
+      }
+      console.log(hiroshi.name)
+      hiroshi.sayHello()
+    </script>
+    <script src="main.js"></script>
+  </body>
+</html>
