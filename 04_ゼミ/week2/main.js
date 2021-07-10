@@ -1,14 +1,15 @@
-const FizzBuzz = function(number) {
-  for (let n = 1; n <= number; n++) {
-    if (n % 5 === 0 && n % 3 === 0) {
-      console.log("FizzBuzz")
-    } else if (n % 5 === 0) {
-      console.log("Buzz")
-    } else if (n % 3 === 0) {
-      console.log("Fizz")
-    } else {
-      console.log(n)
-    }
-  }
+// 取得
+const memoInput = document.getElementById("memo-input")
+const addButton = document.getElementById("add-button")
+const memoContainer = document.getElementById("memo-input")
+
+// 保存ボタンを押した後に、メモをHTMLに追加していく。
+addButton.onclick = function() {
+  // inputタグに入力した内容を取得する
+  console.dir(memoInput)
+  const text = "こんにちは"
+
+  // textをhtmlに取得する
+  const div = document.createElement("div")
+  div.textContent = text
 }
-FizzBuzz(100)

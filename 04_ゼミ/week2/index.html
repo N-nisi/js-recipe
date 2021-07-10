@@ -2,46 +2,31 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>week1</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>WebExpertコーステンプレート</title>
   </head>
   <body>
-    <h1>ご飯クイズ</h1>
-    <div>私の昨日の夕飯はなんでしょう？</div>
-    <button id="udon-button">うどん</button>
-    <button id="soba-button">そば</button>
-
+    <h2>メモアプリ</h2>
+    <input type="text" id="memo-input" />
+    <button id="add-button">保存</button>
+    <div id="memo-container"></div>
     <script>
-      const aButton = document.getElementById("udon-button")
-      const bButton = document.getElementById("soba-button")
+      const memoInput = document.getElementById("memo-input")
+      const addButton = document.getElementById("add-button")
+      const container = document.getElementById("memo-container")
 
-      aButton.onclick = function() {
-        console.log("正解です！")
-      }
-      bButton.onclick = function() {
-        console.log("残念！")
-      }
+      addButton.onclick = function() {
+        console.log(memoInput.value)
+        // 取得する
+        const text = memoInput.value
 
-      const hiroshi = {
-        name: "ひろし",
-        university: "立教",
-        age: 22,
-        hobby: ["アニメ", "バッティングセンター"],
-        familly: {
-          papa: "かずみ",
-          mama: "としこ",
-          sis: "ゆうり",
-        },
-        isMentor: false,
-        isStudent: true,
-        sayHello: function() {
-          alert(`こんにちは${this.name}です！！`)
-        },
+        // divタグを作る
+        const div = document.createElement("div")
+        div.textContent = text
+        // divタグを表示する
+        container.append(div)
       }
-      console.log(hiroshi.name)
-      hiroshi.sayHello()
     </script>
-    <script src="main.js"></script>
   </body>
 </html>
