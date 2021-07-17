@@ -6,13 +6,13 @@ const doubleButton = document.getElementById("double-button")
 let count = 0
 
 // // ボタンをクリックしたときの処理を登録
-// plusButton.onclick = function() {
-//   // ここにクリック後の処理を書く
-//   // countを更新
-//   count += 1
-//   // countを表示
-//   display.textContent = count
-// }
+plusButton.onclick = function() {
+  // ここにクリック後の処理を書く
+  // countを更新
+  count += 1
+  // countを表示
+  display.textContent = count
+}
 
 // 便利なボタン
 plusButton.onclick = function() {
@@ -27,3 +27,6 @@ doubleButton.onclick = function() {
   count *= 2
   display.textContent = count
 }
+
+//
+// 電卓

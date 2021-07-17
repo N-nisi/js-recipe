@@ -10,6 +10,17 @@ const figure = document.getElementById("figure")
 //   figure.classList.remove("rounded")
 // }
 
+// figure.onclick = function() {
+//   figure.classList.add("triangle")
+// }
+
 figure.onclick = function() {
-  figure.classList.toggle("rounded")
+  if (figure.classList.contains("square") == true) {
+    figure.classList.add("rounded")
+  } else if (figure.classList.contains("rounded") == true) {
+    figure.classList.add("triangle")
+  } else {
+    figure.classList.remove("triangle")
+    figure.classList.add("square")
+  }
 }

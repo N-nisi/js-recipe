@@ -12,6 +12,14 @@ addButton.onclick = function() {
   inputElement.value = ""
 }
 
+// エンターキー
+// addButton.addEventListener("keypress")
+
+// function enter() {
+//   if (e.keyCode === 13) {
+//   }
+// }
+
 // 共通の処理:テキストからカードを作成する
 const createCard = function(text) {
   // カードの枠を作る

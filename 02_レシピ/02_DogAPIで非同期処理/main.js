@@ -1,5 +1,7 @@
 const imageElement = document.getElementById("dog-image")
 
+const button = document.getElementById("koshin-button")
+
 // 指定したサーバーにデータを取りに行く
 fetch("https://dog.ceo/api/breeds/image/random")
   .then((res) => {
@@ -17,3 +19,14 @@ fetch("https://dog.ceo/api/breeds/image/random")
 //   .then(function(data) {
 //     imageElement.src = data.message
 //   })
+
+// ワンチャン切り替えボタン
+button.onclick = () => {
+  fetch("https://dog.ceo/api/breeds/image/random")
+    .then((res) => {
+      return res.json()
+    })
+    .then((data) => {
+      imageElement.src = data.message
+    })
+}

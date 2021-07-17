@@ -8,9 +8,16 @@
   border-radius: 50px;
 }
 
-/* .triangle{
-
-} */
+.triangle {
+  width: 0;
+  height: 0;
+  font-size: 50px;
+  border-left: 1em solid transparent;
+  border-right: 1em solid transparent;
+  border-bottom: 2em solid black;
+  background-color: white;
+  display: inline-block;
+}
 
 .transition {
   transition: all 1s;

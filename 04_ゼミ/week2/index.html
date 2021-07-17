@@ -16,16 +16,34 @@
       const addButton = document.getElementById("add-button")
       const container = document.getElementById("memo-container")
 
-      addButton.onclick = function() {
-        console.log(memoInput.value)
-        // 取得する
-        const text = memoInput.value
+      let memos = []
 
-        // divタグを作る
-        const div = document.createElement("div")
-        div.textContent = text
-        // divタグを表示する
-        container.append(div)
+      addButton.onclick = function() {
+        //console.log(memoInput.value);
+        // 取得する
+
+        const text = memoInput.value
+        memos.push(text)
+
+        console.log(memos)
+
+        container.innerHTML = ""
+
+        if (localStorage.memos) {
+          //ローカルストレージのmemosキーからJSONを読み込む
+          const memoJson = localStorage.memos
+
+          // JSON.parseで配列にして、memosを更新する
+          memos = JSON.parse(memoJson)
+
+          for (let i = 0; i < memos.length; i++) {
+            const div = document.createElement("div")
+
+            div.textContent = memos[i]
+
+            container.append(div)
+          }
+        }
       }
     </script>
   </body>
